@@ -30,6 +30,6 @@ func main() {
 	fmt.Printf("Area of the rectangle: %.2f square units\n", area)
 	fmt.Printf("Perimeter of the rectangle: %.2f units\n", perimeter)
 
-	rectInterface := Rectangle{Width: 100, Height: 50}
+	rectInterface := interfaceEx.NewRectangle(100.00, 50.00)
 	interfaceEx.PrintShapeDetails(rectInterface)
 }

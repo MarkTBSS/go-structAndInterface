@@ -16,6 +16,14 @@ type Rectangle struct {
 	Height float64
 }
 
+// Constructor
+func NewRectangle(width, height float64) Shape {
+	return &Rectangle{
+		Width:  width,
+		Height: height,
+	}
+}
+
 // Method สำหรับคำนวณพื้นที่ของ Rectangle
 func (r Rectangle) Area() float64 {
 	return r.Width * r.Height
