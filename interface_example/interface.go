@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type Shaper interface {
+type IShaper interface {
 	Area() float64
 	Perimeter() float64
 }
@@ -15,7 +15,7 @@ type Rectangle struct {
 }
 
 // Constructor
-func NewRectangle(width, height float64) Shaper {
+func NewRectangle(width, height float64) IShaper {
 	return &Rectangle{
 		Width:  width,
 		Height: height,
@@ -31,7 +31,7 @@ func (r Rectangle) Perimeter() float64 {
 }
 
 // ใช้ฟังก์ชัน printShapeDetails เพื่อพิมพ์รายละเอียดของรูปทรงที่ได้รับ interface Shape
-func PrintShapeDetails(s Shaper) {
+func PrintShapeDetails(s IShaper) {
 	area := s.Area()
 	perimeter := s.Perimeter()
 
